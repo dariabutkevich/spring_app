@@ -1,0 +1,28 @@
+body {
+    font-family: Century Gothic, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #efefef;
+    color: black;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a, p {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header a:hover {
+    background-color: #e5e3e3;
+}
+
+main {
+    padding: 10px 70px;
+}

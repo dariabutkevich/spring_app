@@ -1,0 +1,22 @@
+2024-06-26T15:36:56.094+03:00  INFO 412 --- [pro] [main] com.example.pro.ProApplication           : Starting ProApplication using Java 21.0.2 with PID 412 (C:\Users\user\Downloads\Telegram Desktop\pro\target\classes started by user in C:\Users\user\Downloads\Telegram Desktop\pro)
+2024-06-26T15:36:56.098+03:00  INFO 412 --- [pro] [main] com.example.pro.ProApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-06-26T15:36:58.168+03:00  INFO 412 --- [pro] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-26T15:36:58.195+03:00  INFO 412 --- [pro] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-26T15:36:58.195+03:00  INFO 412 --- [pro] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-26T15:36:58.287+03:00  INFO 412 --- [pro] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-26T15:36:58.288+03:00  INFO 412 --- [pro] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2052 ms
+2024-06-26T15:36:58.491+03:00  INFO 412 --- [pro] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-06-26T15:36:58.994+03:00  INFO 412 --- [pro] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-26T15:36:59.006+03:00  INFO 412 --- [pro] [main] com.example.pro.ProApplication           : Started ProApplication in 3.804 seconds (process running for 5.17)
+2024-06-26T15:36:59.011+03:00  INFO 412 --- [pro] [main] com.example.pro.ProApplication           : App started successfully.
+2024-06-26T15:37:36.227+03:00  INFO 10468 --- [pro] [main] com.example.pro.ProApplication           : Starting ProApplication using Java 21.0.2 with PID 10468 (C:\Users\user\Downloads\Telegram Desktop\pro\target\classes started by user in C:\Users\user\Downloads\Telegram Desktop\pro)
+2024-06-26T15:37:36.230+03:00  INFO 10468 --- [pro] [main] com.example.pro.ProApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-06-26T15:37:38.001+03:00  INFO 10468 --- [pro] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-26T15:37:38.041+03:00  INFO 10468 --- [pro] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-26T15:37:38.041+03:00  INFO 10468 --- [pro] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-26T15:37:38.136+03:00  INFO 10468 --- [pro] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-26T15:37:38.137+03:00  INFO 10468 --- [pro] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1828 ms
+2024-06-26T15:37:38.336+03:00  INFO 10468 --- [pro] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-06-26T15:37:38.835+03:00  INFO 10468 --- [pro] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-26T15:37:38.846+03:00  INFO 10468 --- [pro] [main] com.example.pro.ProApplication           : Started ProApplication in 3.375 seconds (process running for 4.483)
+2024-06-26T15:37:38.851+03:00  INFO 10468 --- [pro] [main] com.example.pro.ProApplication           : App started successfully.
