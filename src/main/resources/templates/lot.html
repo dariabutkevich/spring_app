@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lot</title>
+    <link th:href="@{/static1/css/lots.css}" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p>Lot</p>
+    <nav>
+        <a th:href="@{/apppage}">Back to App Page</a>
+        <a th:href="@{/profile}">Profile</a>
+        <a th:href="@{/logout}">Log out</a>
+    </nav>
+</header>
+
+<main>
+    <div class="lott">
+    <h2 th:text="${lot.lotname}"></h2>
+    <img th:src="${lot.photo}" style="max-width: 50%; height: auto; border-radius: 3px; " alt="Lot Image"  /><br>
+    Description: <span th:text="${lot.description}"></span><br>
+    Starting price: <span th:text="${lot.startprice}"></span>$<br>
+    Current price: <span th:text="${lot.currentprice}"></span>$<br>
+        <a th:href="@{/apppage/lot/{id}/bet(id=${lot.id})}">
+            <button type="button">Place a Bet</button>
+        </a>
+    </div>
+</main>
+</body>
+</html>

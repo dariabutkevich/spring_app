@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Auction</title>
+    <link th:href="@{/static1/css/sign.css}" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p>Application</p>
+    <nav>
+        <a href="/signup">Sign up</a>
+        <a href="/signin">Sign in</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Welcome to the Flower Auction!</h1>
+    <p>We are glad to see you on our site, where everyone can find unique flowers and arrangements for any occasion. Join our auctions, offer your lots, and enjoy shopping! To get more information, you need to <strong>sign in</strong> or <strong>sign up</strong>!</p>
+    <h2>Current auction: Summer Flower Festival</h2>
+    <h3>🌼 Lots of the Week:</h3>
+    <ul th:each="lot : ${lots}">
+        <li class="lott">
+            <img th:src="${lot.photo}" alt="Lot Image" />
+            <strong th:text="${lot.lotname}"></strong><br>
+            Description: <span th:text="${lot.description}"></span>
+        </li>
+    </ul>
+
+    <p>Don't miss your chance to place a bid and win one of our amazing lots! Good luck!</p>
+</main>
+</body>
+</html>

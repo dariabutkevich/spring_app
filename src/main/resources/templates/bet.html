@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bet</title>
+    <link th:href="@{/static1/css/bet.css}" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p>Bet</p>
+    <nav>
+        <a th:href="@{/apppage}">Back to App page</a>
+        <a th:href="@{/profile}">Profile</a>
+        <a th:href="@{/logout}">Log out</a>
+    </nav>
+</header>
+
+<main >
+    Current bet:<span th:text="${lot.lotname}"></span><br>
+    Current price: <span th:text="${lot.currentprice}"></span>$<br>
+    <p>The minimum step for a bet is 50$</p>
+    <form th:action="@{/apppage/lot/{id}/bet(id=${lot.id})}" method="post">
+        <label for="bidAmount">Enter the amount:</label>
+        <input type="number" id="bidAmount" name="bidAmount" step="0.01" required />
+        <button type="submit">OK</button>
+    </form>
+
+    <p th:if="${param.error == 'low_bid'}" style="color: red;">Your bid must be higher than the current price.</p>
+    <p th:if="${param.error == 'min_bid'}" style="color: #a12d2d;">Your bid must be at least $50 higher than the current price.</p>
+
+</main>
+</body>
+</html>

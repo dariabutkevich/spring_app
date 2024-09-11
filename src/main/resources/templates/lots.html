@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Lots</title>
+    <link th:href="@{/static1/css/lots.css}" rel="stylesheet">
+</head>
+<header>
+    <p>Create Lot</p>
+    <nav>
+        <a th:href="@{/admin}">Admin Panel</a>
+        <a th:href="@{/logout}">Log out</a>
+    </nav>
+</header>
+<body>
+<h1>All Lots</h1>
+<main>
+    <a class="create-lot" th:href="@{/admin/lots/createlot}">Create Lot</a>
+    <div th:each="lot : ${lots}">
+        <div class="lot">
+            <h2 th:text="${lot.lotname}"></h2>
+            <p th:text="${lot.description}"></p>
+            <p th:text="${lot.lastuser}"></p>
+            <p><strong>Current Bid:</strong> <span th:text="${lot.startprice}"></span></p>
+            <img th:src="${lot.photo}" alt="Lot Image" />
+            <form th:action="@{/admin/lots/delete/{id}(id=${lot.id})}" method="post" style="display:inline;">
+                <button type="submit" class="delete-button">Delete</button>
+            </form>
+             <a th:href="@{/admin/lots/editlot/{id}(id=${lot.id})}" class="edit-button"><button type="submit" >Edit</button></a>
+        </div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>App Page</title>
+    <link th:href="@{/static1/css/sign.css}" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p>App page</p>
+    <nav>
+        <a th:href="@{/profile}">Profile</a>
+        <a th:href="@{/logout}">Log out</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Current flower auction</h2>
+
+    <p><strong>Auction name:</strong> Summer Flower Festival</p>
+
+    <p><strong>Brief description of the auction:</strong><br>
+        Join our summer flower festival, where you can find rare and exotic plants, as well as unique flower arrangements. Don't miss the opportunity to add bright accents to your home!</p>
+
+    <p><strong>Auction start and end dates:</strong><br>
+        - <strong>Start date:</strong> June 10, 2024<br>
+        - <strong>End date:</strong> September 16, 2024</p>
+
+    <ul th:each="lot : ${lots}">
+        <li class="lott">
+            <img th:src="${lot.photo}" alt="Lot Image" />
+            <strong th:text="${lot.lotname}"></strong><br>
+            Description: <span th:text="${lot.description}"></span><br>
+            Starting price: <span th:text="${lot.startprice}"></span>$<br>
+            Current price: <span th:text="${lot.currentprice}"></span>$<br>
+            <a th:href="@{/apppage/lot/{id}(id=${lot.id})}" style="text-decoration: none; color: #333333; font-weight: bold;font-size: 18px;">View Lot</a>
+        </li>
+    </ul>
+</main>
+</body>
+</html>

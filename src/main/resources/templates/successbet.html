@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Success bet</title>
+    <link th:href="@{/static1/css/sign.css}" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p>App page</p>
+    <nav>
+        <a th:href="@{/profile}">Profile</a>
+        <a th:href="@{/logout}">Log out</a>
+    </nav>
+</header>
+
+<main th:each="lot : ${lots}">
+    <p>Your bet has been successfully registered for the lot:<span th:text="${lot.lotname}"></span></p>
+    <button type="submit">Main page</button>
+</main>
+</body>
+</html>

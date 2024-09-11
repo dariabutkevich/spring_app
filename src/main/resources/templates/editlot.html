@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Lot</title>
+    <link th:href="@{/static1/css/sign.css}" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <p>Application</p>
+    <nav>
+        <a href="/signup">Sign up</a>
+        <a href="/signin">Sign in</a>
+    </nav>
+</header>
+<main>
+<h1>Edit lot</h1>
+<form th:action="@{/admin/lots/update/{id}(id=${lot.id})}" method="post">
+    <label for="lotname">Lot Name:</label>
+    <input type="text" id="lotname" name="lotname" th:value="${lot.lotname}" required>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" th:text="${lot.description}" required></textarea>
+
+    <label for="startprice">Start Price:</label>
+    <input type="number" id="startprice" name="startprice" th:value="${lot.startprice}" required>
+
+    <label for="photoUrl">URL Photo:</label>
+    <input type="url" id="photoUrl" name="photoUrl" th:value="${lot.photo}" required>
+
+    <button type="submit">Save</button>
+</form>
+</main>
+</body>
+</html>

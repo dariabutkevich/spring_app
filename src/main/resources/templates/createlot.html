@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Lot</title>
+    <link th:href="@{/static1/css/sign.css}" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p>Create Lot</p>
+    <nav>
+        <a th:href="@{/admin}">Admin Panel</a>
+        <a th:href="@{/logout}">Log out</a>
+    </nav>
+</header>
+
+<main>
+    <form th:action="@{/admin/lots}" method="post" >
+        <label for="title">Lot Name:</label>
+        <input type="text" id="title" name="lotname" required/>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="currentBid">Start Price:</label>
+        <input type="number" id="currentBid" name="startprice" step="1" required/>
+
+        <label for="photoUrl">URL Photo:</label>
+        <input type="url" id="photoUrl" name="photoUrl" required/>
+
+        <button type="submit">Create Lot</button>
+    </form>
+</main>
+</body>
+</html>
